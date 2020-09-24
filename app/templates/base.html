@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+        <title>{{title}} - Home Page</title>
+        {% else %}
+        <title>Home Page</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>Weather App, from: <a href="https://www.weatherapi.com/">WeatherAPI</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
