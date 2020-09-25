@@ -5,12 +5,19 @@
 {% block content %}
 <div class="container-fluid">
     <h1>Look up a location's current temperature</h1>
-    <form action="" class="form" method="post">
+    <form action="" class="needs-validation" novalidate method="post">
         {{ form.csrf_token }}
-        <div>
+        <div class="form-row">
             {{ wtf.form_field(form.location, class='form-control') }}
-            <input type=submit class="btn btn-primary" aria-label="Search">
+            <small id="locationHelp" class="form-text text-muted">A location to query</small>
         </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="tempCheck">
+            <label class="form-check-label" for="tempCheck">Temperature</label>
+            <label class="form-check-label" for="">Temperature</label>
+        </div>
+        <br />
+        <input type=submit class="btn btn-primary" aria-label="Search">
     </form>
 </nav>
 {% endblock %}
