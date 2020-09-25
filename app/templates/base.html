@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        {% if title %}
-        <title>{{title}} - Home Page</title>
-        {% else %}
-        <title>Home Page</title>
-        {% endif %}
-    </head>
-    <body>
-        <div>Weather App, from: <a href="https://www.weatherapi.com/">WeatherAPI</a></div>
-        <hr>
-        {% block content %}{% endblock %}
-    </body>
-</html>
+{% extends "bootstrap/base.html" %}
+
+<link rel="stylesheet" href="app\static\styles\base.css">
+
+{% block title %}
+{% if title %}
+{{ title }} - WeatherApp
+{% else %}
+Welcome to WeatherApp
+{% endif %}
+{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/index">WeatherApp</a>
+</nav>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

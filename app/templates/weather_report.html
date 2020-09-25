@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>You looked up {{location}}!</h1>
+<h1>You looked up {{location.title()}}!</h1>
+<div>
+    <p>Temp C: {{response.current.temp_c}}</p>
+    <p>Temp F: {{response.current.temp_f}}</p>
+</div>
+<a href="/">Back</a>
 {% endblock %}
