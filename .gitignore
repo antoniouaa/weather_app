@@ -1,3 +1,5 @@
 venv/
-/config*.*
 .flaskenv
+credentials.json
+.vscode
+__pycache__
