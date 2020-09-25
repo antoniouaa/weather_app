@@ -14,7 +14,7 @@ def index():
 
 
 @app.route("/<location>", methods=["GET"])
-def temp_fetch(location):
+def stats_fetch(location):
     url = app.config["BASE_URL"]
     key = app.config["API_KEY"]
     params = {
@@ -22,4 +22,5 @@ def temp_fetch(location):
         "q" : location,
     }
     weather_request = requests.get(f"{url}/current.json", params=params).json()
+    print(weather_request)
     return render_template("weather_report.html", title="Report", location=location, response=weather_request)
