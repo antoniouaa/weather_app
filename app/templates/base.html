@@ -1,21 +1,19 @@
-{% extends "bootstrap/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}
-{% if title %}
-{{ title }} - WeatherApp
-{% else %}
-Welcome to WeatherApp
-{% endif %}
-{% endblock %}
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
 
-{% block navbar %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/index">WeatherApp</a>
-</nav>
-{% endblock %}
+<body>
+    <div class="topbar">
+        <p><a href="/index">WeatherApp</a>brought to you by<a href="https://www.weatherapi.com/">WeatherAPI</a></p>
+    </div>
+    <div class="flexcontainer">
+        {% block content %} {% endblock %}
+    </div>
+</body>
 
-{% block content %}
-{% endblock %}
-
-{% block footer %}
-{% endblock %}
+</html>

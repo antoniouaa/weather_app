@@ -9,5 +9,5 @@ def fetch_credentials():
 
 
 class Config:
-    SECRET_KEY = os.environ.get("SECRET_KEY") or "you-will-never-guess"
+    SECRET_KEY = os.environ.get("SECRET_KEY") or "fuck this shit already"
     API_KEY, BASE_URL = fetch_credentials()

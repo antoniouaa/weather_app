@@ -1,10 +1,19 @@
-{% extends "base.html" %}
-
-{% block content %}
-<h1>You looked up {{location.title()}}!</h1>
-<div>
-    <p>Temp C: {{response.current.temp_c}}</p>
-    <p>Temp F: {{response.current.temp_f}}</p>
+{% extends "base.html" %} {% block content %}
+<div class="flexitem">
+    <h1 class="h1-index-greet">You looked up {{location.title()}}, {{response.location.country.title()}}!</h1>
 </div>
-<a href="/">Back</a>
+<div class="flexitem">
+    <form action="{{url_for('index')}}" class="form">
+        <p style="font-size: 22pt;">Weather results</p>
+        <div>
+            <ul class="items-list results">
+                <li>{{response.current.temp_c}} °C </li>
+                <li>{{response.current.temp_f}} °F</li>
+            </ul>
+            <img src="{{response.current.condition.icon}}">
+            <p class="condition-text">{{response.current.condition.text}}</p>
+            <input type=submit class="button" aria-label="Search" value="Back">
+        </div>
+    </form>
+</div>
 {% endblock %}

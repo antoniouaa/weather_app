@@ -1,27 +1,17 @@
-{% extends "base.html" %}
-
-{% import "bootstrap/wtf.html" as wtf %}
-
-{% block content %}
-<div class="container-fluid">
-    <h1>Look up a location's current temperature</h1>
-    <form action="" class="needs-validation" novalidate method="post">
-        {{ form.csrf_token }}
-        <div class="form-row">
-            {{ wtf.form_field(form.location, class='form-control') }}
-        </div>
-        <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="temp_check">
-            <label class="form-check-label" for="temp_check">Temperature</label>
-            <br />
-            <input type="checkbox" class="form-check-input" id="pressure_check">
-            <label class="form-check-label" for="pressure_check">Pressure</label>
-            <br />
-            <input type="checkbox" class="form-check-input" id="humidity_check">
-            <label class="form-check-label" for="humidity_check">Humidity</label>
-        </div>
-        <br />
-        <input type=submit class="btn btn-primary" aria-label="Search">
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block content %}
+<div class="flexitem">
+    <h1 class="h1-index-greet">Look up a location's current temperature</h1>
+</div>
+<div class="flexitem">
+    <form action="" class="form" novalidate method="post">
+        {{ form.csrf_token }} {{ wtf.form_field(form.location, class='textbox', label="LA") }}
+        <hr>
+        <p>Additional Parameters</p>
+        <ul class="items-list settings">
+            <li>{{ wtf.form_field(form.pressure, class="form-check-input")}}</li>
+            <li>{{ wtf.form_field(form.humidity, class="form-check-input")}}</li>
+        </ul>
+        <input type=submit class="button" aria-label="Search" value="Query">
     </form>
-</nav>
+</div>
 {% endblock %}

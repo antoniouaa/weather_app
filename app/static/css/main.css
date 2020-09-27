@@ -1,0 +1,137 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+header {
+    width: 100%;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+    background-color: #cce6ff;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    transition: all 0.3s;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+p {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: inherit;
+}
+
+p.condition-text {
+    font-size: 22pt;
+}
+
+.items-list {
+    list-style-type: none;
+    margin-left: -34px;
+    margin-top: -10px;
+}
+
+.items-list.settings {}
+
+.items-list.results {
+    font-size: 28pt;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+img {
+    margin-top: -10px;
+    float: left;
+}
+
+.topbar {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: #cbd9e6;
+}
+
+.flexcontainer {
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.flexitem {
+    height: 384px;
+    width: 500px;
+    vertical-align: text-top;
+}
+
+.textbox {
+    width: 100%;
+    margin: 0;
+    height: 20px;
+    margin-bottom: 5%;
+}
+
+.form {
+    padding: 20px;
+    margin: 50px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border: 2px solid #cbd9e6;
+}
+
+.h1-index-greet {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 48pt;
+}
+
+.button {
+    font-family: "Poppins";
+    display: inline-block;
+    padding: 0.5em 3em;
+    border: 0.16em solid #333;
+    margin: 0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.15s;
+    text-align: center;
+    position: static;
+}
+
+.button:hover {
+    color: #333333;
+    border-color: #dddddd;
+}
+
+.button:active {
+    color: #bbbbbb;
+    border-color: #bbbbbb;
+}
+
+@media all and (max-width:30em) {
+    .button {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
